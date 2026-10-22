@@ -12,13 +12,10 @@ import {
   Easing,
 } from 'react-native';
 import axios from 'axios';
-import Constants from 'expo-constants';
 
-const API_URL = 'http://192.168.56.1:1234/api/v1/chat';
-const AUTH_TOKEN =
-  Constants?.expoConfig?.extra?.authToken ??
-  Constants?.manifest?.extra?.authToken ??
-  '';
+const API_URL =
+  process.env.EXPO_PUBLIC_API_URL || 'http://192.168.56.1:1234/api/v1/chat';
+const AUTH_TOKEN = process.env.EXPO_PUBLIC_AUTH_TOKEN || '';
 
 const CONTACT = {
   name: 'Poncho',
