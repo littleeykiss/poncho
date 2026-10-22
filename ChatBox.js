@@ -92,7 +92,7 @@ export default function ChatBox() {
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <LinearGradient colors={['#4a90e2', '#357ABD']} style={styles.header}>
         <Text style={styles.headerText}>🤖 Poncho AI Chat</Text>
-      </View>
+      </LinearGradient>
       <FlatList
         ref={flatListRef}
         data={messages}
