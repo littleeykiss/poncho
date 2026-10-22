@@ -66,7 +66,7 @@ export default function ChatBox() {
       });
       const botMsg = {
         id: (Date.now() + 1).toString(),
-        text: response.data?.output?.trim() ?? 'Sin respuesta',
+        text: response.data?.output?.[0]?.content ?? 'Sin respuesta',
         isUser: false,
       };
       setMessages(prev => [...prev, botMsg]);
@@ -90,7 +90,7 @@ export default function ChatBox() {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <LinearGradient colors={['#4a90e2', '#357ABD']} style={styles.header}>
+      <LinearGradient colors={['#2c2c2c', '#1a1a1a']} style={styles.header}>
         <Text style={styles.headerText}>🤖 Poncho AI Chat</Text>
       </LinearGradient>
       <FlatList
