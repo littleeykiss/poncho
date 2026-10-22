@@ -7,7 +7,7 @@ export default function App() {
     return (
         <SafeAreaView style={styles.safeArea}>
             <ChatBox />
-            <StatusBar style="light" />
+            <StatusBar style="light" backgroundColor="#000000" />
         </SafeAreaView>
     );
 }
@@ -16,6 +16,5 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: '#000000',
-        alignItems: 'center',
     },
 });
